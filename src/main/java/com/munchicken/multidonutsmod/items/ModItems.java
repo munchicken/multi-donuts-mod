@@ -9,7 +9,7 @@ public class ModItems {
 
     public static void loadItems(){
 
-        donut = new Donut();
+        donut = new Donut().setAlwaysEdible();
         RegisterHelper.registerItem(donut);
     }
 }
