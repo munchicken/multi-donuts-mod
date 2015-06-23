@@ -10,6 +10,13 @@ public class ModRecipes {
     public static void addRecipes(){
 
         GameRegistry.addRecipe(new ItemStack(ModItems.donut), new Object[] {
+                " Y ",
+                "X Z",
+                " W ",
+                'W', Items.milk_bucket, 'X', Items.sugar, 'Y', Items.wheat, 'Z', Items.egg
+        });
+
+        GameRegistry.addRecipe(new ItemStack(ModItems.dough), new Object[] {
                 " W ",
                 "X Z",
                 " Y ",
