@@ -2,6 +2,8 @@ package com.munchicken.multidonutsmod.handlers;
 
 import com.munchicken.multidonutsmod.items.ModItems;
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
@@ -21,6 +23,13 @@ public class ModRecipes {
                 "X Z",
                 " Y ",
                 'W', Items.milk_bucket, 'X', Items.sugar, 'Y', Items.wheat, 'Z', Items.egg
+        });
+
+        GameRegistry.addRecipe(new ItemStack(ModItems.rollingPin), new Object[] {
+                "   ",
+                "XYZ",
+                "   ",
+                'X', Items.stick, 'Y', Blocks.planks, 'Z', Items.stick
         });
     }
 }
