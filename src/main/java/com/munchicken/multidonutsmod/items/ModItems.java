@@ -9,6 +9,7 @@ public class ModItems {
     public static ItemFood donut;
     public static Item dough;
     public static Item rollingPin;
+    public static Item flatDough;
 
     public static void loadItems(){
 
@@ -20,5 +21,8 @@ public class ModItems {
 
         rollingPin = new RollingPin();
         RegisterHelper.registerItem(rollingPin);
+
+        flatDough = new FlatDough();
+        RegisterHelper.registerItem(flatDough);
     }
 }
