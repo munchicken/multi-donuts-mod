@@ -39,5 +39,12 @@ public class ModRecipes {
                 "   ",
                 'X', ModItems.dough, 'Y', ModItems.rollingPin
         });
+
+        GameRegistry.addRecipe(new ItemStack(ModItems.cutter), new Object[] {
+                " X ",
+                "X X",
+                " X ",
+                'X', Items.iron_ingot
+        });
     }
 }
