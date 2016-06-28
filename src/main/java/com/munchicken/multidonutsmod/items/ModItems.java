@@ -11,6 +11,7 @@ public class ModItems {
     public static Item rollingPin;
     public static Item flatDough;
     public static Item cutter;
+    public static Item rawDonut;
 
     public static void loadItems(){
 
@@ -28,5 +29,8 @@ public class ModItems {
 
         cutter = new Cutter();
         RegisterHelper.registerItem(cutter);
+
+        rawDonut = new RawDonut();
+        RegisterHelper.registerItem(rawDonut);
     }
 }

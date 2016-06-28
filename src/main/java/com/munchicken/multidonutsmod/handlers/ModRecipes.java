@@ -37,11 +37,15 @@ public class ModRecipes {
                 ModItems.dough, ModItems.rollingPin
         });
 
-        GameRegistry.addRecipe(new ItemStack(ModItems.cutter), new Object[] {
+        GameRegistry.addRecipe(new ItemStack(ModItems.cutter), new Object[]{
                 " X ",
                 "X X",
                 " X ",
                 'X', Items.iron_ingot
+        });
+
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.rawDonut), new Object[]{
+                ModItems.flatDough, ModItems.cutter
         });
     }
 }
