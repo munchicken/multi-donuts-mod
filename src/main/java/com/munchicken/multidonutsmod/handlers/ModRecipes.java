@@ -33,11 +33,8 @@ public class ModRecipes {
                 'X', Items.stick, 'Y', Blocks.planks
         });
 
-       GameRegistry.addRecipe(new ItemStack(ModItems.flatDough), new Object[]{
-                "XY ",
-                "   ",
-                "   ",
-                'X', ModItems.dough, 'Y', ModItems.rollingPin
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.flatDough), new Object[]{
+                ModItems.dough, ModItems.rollingPin
         });
 
         GameRegistry.addRecipe(new ItemStack(ModItems.cutter), new Object[] {
