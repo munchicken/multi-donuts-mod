@@ -47,5 +47,11 @@ public class ModRecipes {
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.rawDonut), new Object[]{
                 ModItems.flatDough, ModItems.cutter
         });
+
+        GameRegistry.addSmelting(new ItemStack(ModItems.rawDonut), new ItemStack(ModItems.cookedDonut), 0.1F);
+
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.pastryBag), new Object[]{
+                Blocks.chest, Blocks.hopper
+        });
     }
 }
