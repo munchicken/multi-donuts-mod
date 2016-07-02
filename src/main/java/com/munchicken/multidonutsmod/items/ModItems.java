@@ -17,7 +17,7 @@ public class ModItems {
 
     public static void loadItems(){
 
-        donut = new Donut().setAlwaysEdible();
+        donut = new Donut();
         RegisterHelper.registerItem(donut);
 
         dough = new Dough();
