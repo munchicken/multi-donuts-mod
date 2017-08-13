@@ -12,7 +12,7 @@ public class ModRecipes {
 
     public static void addRecipes(){
 
-        GameRegistry.addRecipe(new ItemStack(ModItems.donut), new Object[] {
+        GameRegistry.addRecipe(new ItemStack(ModItems.strawberryYellowBrownieDonut), new Object[] {
                 " Y ",
                 "X Z",
                 " W ",

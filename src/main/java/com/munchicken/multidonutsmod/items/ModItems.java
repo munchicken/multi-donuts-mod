@@ -6,7 +6,8 @@ import net.minecraft.item.ItemFood;
 
 public class ModItems {
 
-    public static ItemFood donut;
+    //public static ItemFood donut;
+    public static ItemFood strawberryYellowBrownieDonut;
     public static Item dough;
     public static Item rollingPin;
     public static Item flatDough;
@@ -17,8 +18,11 @@ public class ModItems {
 
     public static void loadItems(){
 
-        donut = new Donut();
-        RegisterHelper.registerItem(donut);
+        //donut = new Donut();
+        //RegisterHelper.registerItem(donut);
+
+        strawberryYellowBrownieDonut = new Donut(Donut.Icing.STRAWBERRY,Donut.Sprinkle.YELLOW, Donut.Fill.BROWNIE);
+        RegisterHelper.registerItem(strawberryYellowBrownieDonut);
 
         dough = new Dough();
         RegisterHelper.registerItem(dough);

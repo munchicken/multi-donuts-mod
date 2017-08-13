@@ -14,6 +14,6 @@ public class CreativeTabsMultiDonutsMod extends CreativeTabs {
     @Override
     public Item getTabIconItem(){
 
-        return ModItems.donut;
+        return ModItems.strawberryYellowBrownieDonut;
     }
 }
