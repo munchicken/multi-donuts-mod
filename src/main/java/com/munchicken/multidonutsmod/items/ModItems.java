@@ -15,6 +15,7 @@ public class ModItems {
     public static Item rawDonut;
     public static Item cookedDonut;
     public static Item pastryBag;
+    public static Item strawberry;
 
     public static void loadItems(){
 
@@ -44,5 +45,8 @@ public class ModItems {
 
         pastryBag = new PastryBag();
         RegisterHelper.registerItem(pastryBag);
+
+        strawberry = new Strawberry();
+        RegisterHelper.registerItem(strawberry);
     }
 }
