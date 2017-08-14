@@ -13,5 +13,6 @@ public class ModHooks {
     public static void grabHooks() {
         MinecraftForge.addGrassSeed(new ItemStack(ModItems.strawberry),10);
         MinecraftForge.addGrassSeed(new ItemStack(ModItems.blueberry),10);
+        MinecraftForge.addGrassSeed(new ItemStack(ModItems.vanillaBean),10);
     }
 }
