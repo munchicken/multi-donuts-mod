@@ -1,5 +1,6 @@
 package com.munchicken.multidonutsmod;
 
+import com.munchicken.multidonutsmod.handlers.ModHooks;
 import com.munchicken.multidonutsmod.handlers.ModRecipes;
 import com.munchicken.multidonutsmod.items.ModItems;
 import com.munchicken.multidonutsmod.proxies.CommonProxy;
@@ -24,6 +25,7 @@ public class MultiDonutsMod {
         this.proxy.preInit(event);
         ModItems.loadItems();
         ModRecipes.addRecipes();
+        ModHooks.grabHooks();
 
     }
 
