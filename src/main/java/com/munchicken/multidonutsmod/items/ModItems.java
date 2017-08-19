@@ -18,6 +18,7 @@ public class ModItems {
     public static Item strawberry;
     public static Item blueberry;
     public static Item vanillaBean;
+    public static Item shaker;
 
     public static void loadItems(){
 
@@ -56,5 +57,8 @@ public class ModItems {
 
         vanillaBean = new VanillaBean();
         RegisterHelper.registerItem(vanillaBean);
+
+        shaker = new Shaker();
+        RegisterHelper.registerItem(shaker);
     }
 }

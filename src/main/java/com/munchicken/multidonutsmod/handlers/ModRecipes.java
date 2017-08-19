@@ -53,5 +53,9 @@ public class ModRecipes {
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.pastryBag), new Object[]{
                 Blocks.chest, Blocks.hopper
         });
+
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.shaker), new Object[]{
+                Blocks.iron_bars, Items.bucket
+        });
     }
 }
