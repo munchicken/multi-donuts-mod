@@ -131,9 +131,9 @@ public class Donut extends ItemFood{
     @Override
     public void registerIcons(IIconRegister i) {
         this.donutIcon = i.registerIcon(Reference.MODID + ":" + "cookeddonut");
-        this.icingOverlay = i.registerIcon(Reference.MODID + ":" + getIcing() + "icing");
-        this.sprinkleOverlay = i.registerIcon(Reference.MODID + ":" + getSprinkle() + "sprinkles");
-        this.fillOverlay = i.registerIcon(Reference.MODID + ":" + getFilling() + "filling");
+        this.icingOverlay = i.registerIcon(Reference.MODID + ":" + getIcing() + "icingoverlay");
+        this.sprinkleOverlay = i.registerIcon(Reference.MODID + ":" + getSprinkle() + "sprinklesoverlay");
+        this.fillOverlay = i.registerIcon(Reference.MODID + ":" + getFilling() + "fillingoverlay");
     }
     @Override
     public int getRenderPasses(int meta) {
