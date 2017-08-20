@@ -15,20 +15,20 @@ public class ModItems {
     public static Item rawDonut;
     public static Item cookedDonut;
     public static Item pastryBag;
-    public static Item strawberry;
-    public static Item blueberry;
+    public static ItemFood strawberry;
+    public static ItemFood blueberry;
     public static Item vanillaBean;
     public static Item shaker;
-    public static Item strawberryIcing;
-    public static Item chocolateIcing;
-    public static Item blueberryIcing;
-    public static Item vanillaIcing;
-    public static Item greenSprinkles;
-    public static Item blueSprinkles;
-    public static Item redSprinkles;
-    public static Item yellowSprinkles;
-    public static Item orangeSprinkles;
-    public static Item rainbowSprinkles;
+    public static ItemFood strawberryIcing;
+    public static ItemFood chocolateIcing;
+    public static ItemFood blueberryIcing;
+    public static ItemFood vanillaIcing;
+    public static ItemFood greenSprinkles;
+    public static ItemFood blueSprinkles;
+    public static ItemFood redSprinkles;
+    public static ItemFood yellowSprinkles;
+    public static ItemFood orangeSprinkles;
+    public static ItemFood rainbowSprinkles;
 
     public static void loadItems(){
 
