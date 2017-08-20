@@ -89,5 +89,9 @@ public class ModRecipes {
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.yellowSprinkles), new Object[]{
                 Items.sugar, new ItemStack(Items.dye,1,11)
         });
+
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.orangeSprinkles), new Object[]{
+                Items.sugar, new ItemStack(Items.dye,1,14)
+        });
     }
 }
