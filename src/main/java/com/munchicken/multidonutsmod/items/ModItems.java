@@ -26,6 +26,7 @@ public class ModItems {
     public static Item greenSprinkles;
     public static Item blueSprinkles;
     public static Item redSprinkles;
+    public static Item yellowSprinkles;
 
     public static void loadItems(){
 
@@ -88,5 +89,8 @@ public class ModItems {
 
         redSprinkles = new RedSprinkles();
         RegisterHelper.registerItem(redSprinkles);
+
+        yellowSprinkles = new YellowSprinkles();
+        RegisterHelper.registerItem(yellowSprinkles);
     }
 }
