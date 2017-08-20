@@ -20,6 +20,7 @@ public class ModItems {
     public static Item vanillaBean;
     public static Item shaker;
     public static Item strawberryIcing;
+    public static Item chocolateIcing;
 
     public static void loadItems(){
 
@@ -65,5 +66,7 @@ public class ModItems {
         strawberryIcing = new StrawberryIcing();
         RegisterHelper.registerItem(strawberryIcing);
 
+        chocolateIcing = new ChocolateIcing();
+        RegisterHelper.registerItem(chocolateIcing);
     }
 }
