@@ -23,6 +23,7 @@ public class ModItems {
     public static Item chocolateIcing;
     public static Item blueberryIcing;
     public static Item vanillaIcing;
+    public static Item greenSprinkles;
 
     public static void loadItems(){
 
@@ -76,5 +77,8 @@ public class ModItems {
 
         vanillaIcing = new VanillaIcing();
         RegisterHelper.registerItem(vanillaIcing);
+
+        greenSprinkles = new GreenSprinkles();
+        RegisterHelper.registerItem(greenSprinkles);
     }
 }
