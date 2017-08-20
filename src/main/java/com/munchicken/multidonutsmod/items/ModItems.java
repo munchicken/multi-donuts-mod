@@ -8,6 +8,7 @@ public class ModItems {
 
     //public static ItemFood donut;
     public static ItemFood strawberryYellowBrownieDonut;
+    public static ItemFood noneNoneNoneDonut;
     public static Item dough;
     public static Item rollingPin;
     public static Item flatDough;
@@ -37,6 +38,9 @@ public class ModItems {
 
         strawberryYellowBrownieDonut = new Donut(Donut.Icing.STRAWBERRY,Donut.Sprinkle.YELLOW, Donut.Fill.BROWNIE);
         RegisterHelper.registerItem(strawberryYellowBrownieDonut);
+
+        noneNoneNoneDonut = new Donut(Donut.Icing.NONE,Donut.Sprinkle.NONE, Donut.Fill.NONE);
+        RegisterHelper.registerItem(noneNoneNoneDonut);
 
         dough = new Dough();
         RegisterHelper.registerItem(dough);
