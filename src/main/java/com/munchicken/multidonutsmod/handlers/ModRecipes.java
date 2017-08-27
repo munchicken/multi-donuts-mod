@@ -123,5 +123,9 @@ public class ModRecipes {
                 " Z ",
                 'W', Items.water_bucket, 'X', new ItemStack(Items.dye,1,3), 'Y', Items.wheat, 'Z', Items.sugar
         });
+
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.fillingTube), new Object[]{
+                Items.bucket, Blocks.hopper
+        });
     }
 }
