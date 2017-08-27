@@ -26,7 +26,7 @@ public class ModRecipes {
                 'W', Items.milk_bucket, 'X', Items.sugar, 'Y', Items.wheat, 'Z', Items.egg
         });
 
-        GameRegistry.addRecipe(new ItemStack(ModItems.rollingPin), new Object[] {
+        GameRegistry.addRecipe(new ItemStack(ModItems.rollingPin), new Object[]{
                 "   ",
                 "XYX",
                 "   ",
@@ -108,6 +108,13 @@ public class ModRecipes {
 
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.vanillaFilling), new Object[]{
                 Items.sugar, Items.water_bucket, ModItems.vanillaBean
+        });
+
+        GameRegistry.addRecipe(new ItemStack(ModItems.cookieDoughFilling), new Object[]{
+                " W ",
+                "XYX",
+                " Z ",
+                'W', Items.water_bucket, 'X', Items.wheat, 'Y', new ItemStack(Items.dye,1,3), 'Z', Items.sugar
         });
     }
 }
