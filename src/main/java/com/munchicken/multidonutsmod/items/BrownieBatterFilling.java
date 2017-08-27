@@ -7,11 +7,11 @@ import net.minecraft.item.ItemFood;
 /**
  * Created by Munchicken on 8/26/2017.
  */
-public class ChocolateFilling extends ItemFood {
+public class BrownieBatterFilling extends ItemFood {
 
-    public ChocolateFilling() {
+    public BrownieBatterFilling() {
         super(2, 0.1f, true);
-        setUnlocalizedName("ChocolateFilling");
+        setUnlocalizedName("BrownieBatterFilling");
         setTextureName(Reference.MODID + ":" + getUnlocalizedName().substring(5).toLowerCase());
         setCreativeTab(ModCreativeTabs.tabDonut);
     }

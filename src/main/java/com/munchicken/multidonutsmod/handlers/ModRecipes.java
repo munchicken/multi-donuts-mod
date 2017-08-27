@@ -114,7 +114,14 @@ public class ModRecipes {
                 " W ",
                 "XYX",
                 " Z ",
-                'W', Items.water_bucket, 'X', Items.wheat, 'Y', new ItemStack(Items.dye,1,3), 'Z', Items.sugar
+                'W', Items.water_bucket, 'X', Items.wheat, 'Y', new ItemStack(Items.dye, 1, 3), 'Z', Items.sugar
+        });
+
+        GameRegistry.addRecipe(new ItemStack(ModItems.brownieBatterFilling), new Object[]{
+                " W ",
+                "XYX",
+                " Z ",
+                'W', Items.water_bucket, 'X', new ItemStack(Items.dye,1,3), 'Y', Items.wheat, 'Z', Items.sugar
         });
     }
 }

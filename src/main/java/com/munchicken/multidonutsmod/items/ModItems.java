@@ -34,6 +34,7 @@ public class ModItems {
     public static ItemFood chocolateFilling;
     public static ItemFood vanillaFilling;
     public static ItemFood cookieDoughFilling;
+    public static ItemFood brownieBatterFilling;
 
     public static void loadItems(){
 
@@ -120,5 +121,8 @@ public class ModItems {
 
         cookieDoughFilling = new CookieDoughFilling();
         RegisterHelper.registerItem(cookieDoughFilling);
+
+        brownieBatterFilling = new BrownieBatterFilling();
+        RegisterHelper.registerItem(brownieBatterFilling);
     }
 }
