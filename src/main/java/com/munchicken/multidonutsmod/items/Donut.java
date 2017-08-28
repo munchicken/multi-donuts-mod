@@ -25,7 +25,7 @@ public class Donut extends ItemFood{
         NONE, GREEN, BLUE, RED, YELLOW, ORANGE, RAINBOW
     }
     public enum Fill {
-        NONE, STRAWBERRY, CHOCOLATE, VANILLA, COOKIE, BROWNIE
+        NONE, STRAWBERRY, CHOCOLATE, VANILLA, COOKIEDOUGH, BROWNIEBATTER
     }
     private IIcon donutIcon;
     private IIcon icingOverlay;
@@ -41,13 +41,14 @@ public class Donut extends ItemFood{
         icing = ice;
         sprinkle = sprink;
         filling = f;
-        setUnlocalizedName(capitalize(getIcing()) + capitalize(getSprinkle()) + capitalize(getFilling()) + "Donut");
+        setUnlocalizedName(capitalize(getIcing()) + capitalize(getSprinkle()) + getFilling().substring(0,1).toUpperCase() + getFilling().substring(1) + "Donut");
         //setUnlocalizedName("Donut");
         //setTextureName(Reference.MODID + ":" + getUnlocalizedName().substring(5).toLowerCase());
         setCreativeTab(ModCreativeTabs.tabDonut);
         effects[0] = new PotionEffect(Potion.moveSpeed.id, 1200,1);
         this.setAlwaysEdible();
     }
+
     @Override
     protected void onFoodEaten(ItemStack stack, World world, EntityPlayer player) {
         super.onFoodEaten(stack, world, player);
@@ -55,10 +56,11 @@ public class Donut extends ItemFood{
             if (!world.isRemote && this.effects[i] != null && this.effects[i].getPotionID() > 0)
                 player.addPotionEffect(new PotionEffect(this.effects[i].getPotionID(), this.effects[i].getDuration(), this.effects[i].getAmplifier(), this.effects[i].getIsAmbient()));
     }
+
     private String getIcing() {
         switch (icing) {
             case NONE:
-                return "";
+                return "none";
             case STRAWBERRY:
                 return "strawberry";
             case CHOCOLATE:
@@ -71,10 +73,11 @@ public class Donut extends ItemFood{
                 return "";
         }
     }
+
     private String getSprinkle() {
         switch (sprinkle) {
             case NONE:
-                return "";
+                return "none";
             case GREEN:
                 return "green";
             case BLUE:
@@ -88,59 +91,66 @@ public class Donut extends ItemFood{
             case RAINBOW:
                 return "rainbow";
             default:
-                return "";
+                return "none";
         }
     }
+
     private String getFilling() {
         switch (filling) {
             case NONE:
-                return "";
+                return "none";
             case STRAWBERRY:
                 return "strawberry";
             case CHOCOLATE:
                 return "chocolate";
             case VANILLA:
                 return "vanilla";
-            case COOKIE:
-                return "cookiedough";
-            case BROWNIE:
-                return "browniebatter";
+            case COOKIEDOUGH:
+                return "cookieDough";
+            case BROWNIEBATTER:
+                return "brownieBatter";
             default:
-                return "";
+                return "none";
         }
     }
+
     @Override
     public IIcon getIconFromDamageForRenderPass(int damage, int pass) {
         switch (pass) {
             case 0:
                 return this.donutIcon;
             case 1:
-                return this.icingOverlay;
+                if (!(getIcing().equals("none"))) { return this.icingOverlay; }
+                else if (!(getSprinkle().equals("none"))) { return this.sprinkleOverlay; }
+                else return this.fillOverlay;
             case 2:
-                return this.sprinkleOverlay;
+                if (!(getSprinkle().equals("none"))) { return this.sprinkleOverlay; }
+                else return this.fillOverlay;
             case 3:
                 return this.fillOverlay;
             default:
-                return super.getIconFromDamageForRenderPass(damage,pass);
+                return this.donutIcon;
         }
     }
     @SideOnly(Side.CLIENT)
     public boolean requiresMultipleRenderPasses() {
         return true;
     }
+
     @Override
     public void registerIcons(IIconRegister i) {
         this.donutIcon = i.registerIcon(Reference.MODID + ":" + "cookeddonut");
-        if (!(getIcing().isEmpty())) { this.icingOverlay = i.registerIcon(Reference.MODID + ":" + getIcing() + "icingoverlay"); }
-        if (!(getSprinkle().isEmpty())) { this.sprinkleOverlay = i.registerIcon(Reference.MODID + ":" + getSprinkle() + "sprinklesoverlay"); }
-        if (!(getFilling().isEmpty())) { this.fillOverlay = i.registerIcon(Reference.MODID + ":" + getFilling() + "fillingoverlay"); }
+        if (!(getIcing().equals("none"))) { this.icingOverlay = i.registerIcon(Reference.MODID + ":" + getIcing().toLowerCase() + "icingoverlay"); }
+        if (!(getSprinkle().equals("none"))) { this.sprinkleOverlay = i.registerIcon(Reference.MODID + ":" + getSprinkle().toLowerCase() + "sprinklesoverlay"); }
+        if (!(getFilling().equals("none"))) { this.fillOverlay = i.registerIcon(Reference.MODID + ":" + getFilling().toLowerCase() + "fillingoverlay"); }
     }
+
     @Override
     public int getRenderPasses(int meta) {
         int passes = 1;
-        if (!(getIcing().isEmpty())) { passes++; }
-        if (!(getSprinkle().isEmpty())) { passes++; }
-        if (!(getFilling().isEmpty())) { passes++; }
+        if (!(getIcing().equals("none"))) { passes++; }
+        if (!(getSprinkle().equals("none"))) { passes++; }
+        if (!(getFilling().equals("none"))) { passes++; }
         return passes;
     }
 }
